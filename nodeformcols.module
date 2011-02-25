@@ -1,5 +1,4 @@
 <?php
-// $Id$
 define('NODEFORMCOLS_DEFAULT_REGION', 'main');
 
 /**
