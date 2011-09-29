@@ -1,5 +1,4 @@
 <?php
-// $Id: nodeformcols.module,v 1.7.2.2 2010/09/25 20:33:58 voxpelli Exp $
 define('NODEFORMCOLS_DEFAULT_REGION', 'main');
 
 /**
