@@ -17,6 +17,7 @@ function _nodeformcols_get_node_type_form($type) {
   $nfid = $type . '_node_form';
   $fs = array(
     'build_info' => array('args' => array($node)),
+    'input' => array(),
   );
   $fs += form_state_defaults();
   $nf = drupal_retrieve_form($nfid, $fs);
