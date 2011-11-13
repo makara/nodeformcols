@@ -6,7 +6,7 @@
  */
 
 /**
- * Implementation of hook_install().
+ * Implements hook_install().
  */
 function nodeformcols_install() {
   // We need our hook_theme() to run after node.module's hook_theme().
@@ -18,7 +18,7 @@ function nodeformcols_install() {
 }
 
 /**
- * Implementation of hook_uninstall().
+ * Implements hook_uninstall().
  */
 function nodeformcols_uninstall() {
   $res = db_select('variable')

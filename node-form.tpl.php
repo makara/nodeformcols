@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Template that renders a part of the node form

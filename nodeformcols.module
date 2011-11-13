@@ -2,7 +2,7 @@
 define('NODEFORMCOLS_DEFAULT_REGION', 'main');
 
 /**
- * Implementation of hook_theme().
+ * Implements hook_theme().
  */
 function nodeformcols_theme() {
   return array(
@@ -21,7 +21,7 @@ function nodeformcols_theme() {
 }
 
 /**
- * Implementation of hook_registry_alter.
+ * Implements hook_registry_alter.
  */
 function nodeformcols_theme_registry_alter(&$items) {
   if (!isset($items['taxonomy_form_term'])) {
@@ -34,7 +34,7 @@ function nodeformcols_theme_registry_alter(&$items) {
 }
 
 /**
- * Implementation of hook_menu().
+ * Implements hook_menu().
  */
 function nodeformcols_menu() {
   // TODO move to a hook.
@@ -82,14 +82,14 @@ function nodeformcols_menu() {
       'access arguments' => array($type['permission']),
       'file' => 'nodeformcols.admin.inc',
       'type' => MENU_LOCAL_TASK,
-      'weight' => 3,
+      'weight' => 5,
     );
   }
   return $items;
 }
 
 /**
- * Implementation of hook_ctools_plugin_directory().
+ * Implements hook_ctools_plugin_directory().
  */
 function nodeformcols_ctools_plugin_directory($module, $plugin) {
   if ($module == 'ctools') {
@@ -179,7 +179,7 @@ function _nodeformcols_get_user_form($type) {
 }
 
 /**
- * Implementation of hook_form_alter().
+ * Implements hook_form_alter().
  */
 function nodeformcols_form_alter(&$form, $form_state, $form_id) {
   // When does this get called?
@@ -286,7 +286,7 @@ function _nodeformcols_apply_placements(&$vars, $placements){
 }
 
 /**
- * Implementation of hook_node_type_delete().
+ * Implements hook_node_type_delete().
  */
 function nodeformcols_node_type_delete($info) {
   $result = db_select('variable')
@@ -299,7 +299,7 @@ function nodeformcols_node_type_delete($info) {
 }
 
 /**
- * Implementation of hook_node_type_update().
+ * Implements hook_node_type_update().
  */
 function nodeformcols_node_type_update($info) {
   if (!empty($info->old_type) && $info->old_type != $info->type) {
