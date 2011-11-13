@@ -184,7 +184,7 @@ function _nodeformcols_get_user_form($type) {
 function nodeformcols_form_alter(&$form, $form_state, $form_id) {
   // When does this get called?
   /*
-  if (isset($form['#id']) && $form['#id']=='node-form') {
+  if (isset($form['#node_edit_form']) && $form['#node_edit_form']) {
     drupal_alter('nodeformcols_pre_form', $form);
     $variant = isset($form['#nodeformcols_variant']) ? $form['#nodeformcols_variant'] : 'default';
     $placements = nodeformscols_field_placements('node', $form['#node']->type, $variant);
